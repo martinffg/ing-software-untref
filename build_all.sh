@@ -7,3 +7,5 @@ cd ../Ejercicio2
 mvn test
 cd ../Ejercicio3
 mvn test
+cd ../Ejercicio4
+mvn test

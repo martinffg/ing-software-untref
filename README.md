@@ -4,6 +4,6 @@ Ejercicios incluidos en el repositorio - Martin Fernandez Gamen - Ingenieria de 
 
 - Ejercicio2 Ahorcado 
 
-- Ejercicio3 Batalla Naval: [![Build Status](https://travis-ci.org/martinffg/ing-software-untref.svg?branch=master)](https://travis-ci.org/martinffg/ing-software-untref)
+- Ejercicio3 Batalla Naval
 
-El proyecto fue borrado por error y restablecido desde la última copia actualizada.
+- Ejercicio4 Calcular Envido: [![Build Status](https://travis-ci.org/martinffg/ing-software-untref.svg?branch=master)](https://travis-ci.org/martinffg/ing-software-untref)
