@@ -7,8 +7,8 @@ public class Carta {
 	
 	public Carta(int numeroCarta,Palo paloCarta) {
 		
-		if (((numeroCarta>=1)&&(numeroCarta<=7)) || 
-				((numeroCarta>=10)&&(numeroCarta<=12))) {
+		if ((numeroCarta>=1)&&(numeroCarta<=7) || 
+				(numeroCarta>=10)&&(numeroCarta<=12)) {
 		
 			this.palo=paloCarta;
 			this.numero=numeroCarta;

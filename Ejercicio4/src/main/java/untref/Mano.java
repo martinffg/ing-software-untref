@@ -34,19 +34,19 @@ public class Mano {
 	}
 	
 	private boolean todasCartasIgualPalo() {
-		return ((this.carta1.samePalo(this.carta2)) && (this.carta2.samePalo(this.carta3)));
+		return this.carta1.samePalo(this.carta2) && this.carta2.samePalo(this.carta3);
 	}
 
 	private boolean todasCartasDistintoPalo() {
-		return ((!this.carta1.samePalo(this.carta2)) 
-				&& (!this.carta2.samePalo(this.carta3))
-				&& (!this.carta1.samePalo(this.carta3)));
+		return !this.carta1.samePalo(this.carta2) 
+				&& !this.carta2.samePalo(this.carta3)
+				&& !this.carta1.samePalo(this.carta3);
 	}
 	
 	private boolean soloDosCartasIgualPalo() {
-	 return (((this.carta1.samePalo(this.carta2)) && (!this.carta1.samePalo(this.carta3))) ||
-			((this.carta1.samePalo(this.carta3)) && (!this.carta1.samePalo(this.carta2))) ||
-			((this.carta2.samePalo(this.carta3)) && (!this.carta2.samePalo(this.carta1))));
+	 return this.carta1.samePalo(this.carta2) && !this.carta1.samePalo(this.carta3) ||
+			this.carta1.samePalo(this.carta3) && !this.carta1.samePalo(this.carta2) ||
+			this.carta2.samePalo(this.carta3) && !this.carta2.samePalo(this.carta1);
 	}
 	
 	private int getValorEnvidoTodasCartasIgualPalo() {
@@ -56,9 +56,9 @@ public class Mano {
 		int valor2 = this.getValorCartaEnvido(carta2);
 		int valor3 = this.getValorCartaEnvido(carta3);
 		
-		if ((valor1 <= valor2)&&(valor1 <= valor3)) {
+		if (valor1 <= valor2 && valor1 <= valor3) {
 			valorEnvido=valor2+valor3+20;
-		} else if ((valor2 <= valor1)&&(valor2 <= valor3)) {
+		} else if (valor2 <= valor1 && valor2 <= valor3) {
 			valorEnvido=valor1+valor3+20;
 		} else {
 			valorEnvido=valor1+valor2+20;
@@ -74,7 +74,7 @@ public class Mano {
 		int valor2 = this.getValorCartaEnvido(carta2);
 		int valor3 = this.getValorCartaEnvido(carta3);
 		
-		if ((valor1>=valor2)&&(valor1>=valor3)) {
+		if (valor1>=valor2 && valor1>=valor3) {
 			valorEnvido=valor1;
 		} else if (valor2>=valor3) {
 			valorEnvido=valor2;
