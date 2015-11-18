@@ -1,25 +1,22 @@
 Feature: Como jugador quiero poder calcular el envido que tengo en mi mano
 
-Scenario: Tengo tres cartas de diferente palo
-Given Verifico mi mano
-And carta1 es 1 copa
-And carta2 es 1 espada
-And carta3 es 1 oro.
-When Calculo el envido de mi mano.
+Scenario: Tengo trnumero cartas de diferente palo
+Given "carta1" numero 1 tipo "copa"
+And "carta2" numero 1 tipo "espada"
+And "carta3" numero 1 tipo "oro"
+When Calculo el envido de mi mano
 Then El envido es 1.
 
-Scenario: Tengo tres cartas del mismo palo
-Given Verifico mi mano
-And carta1 es 3 copa
-And carta2 es 1 copa
-And carta3 es 4 copa.
+Scenario: Tengo trnumero cartas del mismo palo
+Given "carta1" numero 3 tipo "copa"
+And "carta2" numero 1 tipo "copa"
+And "carta3" numero 4 tipo "copa"
 When Calculo el envido de mi mano
 Then El envido es 27.
 
 Scenario: Tengo dos cartas del mismo palo y la tercera no.
-Given Verifico mi mano
-And carta1 es 1 copa
-And carta2 es 7 copa
-And carta3 es 1 oro.
+Given "carta1" numero 1 tipo "copa"
+And "carta2" numero 7 tipo "copa"
+And "carta3" numero 1 tipo "oro"
 When Calculo el envido de mi mano
 Then El envido es 28.

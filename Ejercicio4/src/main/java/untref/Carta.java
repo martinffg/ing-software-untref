@@ -5,9 +5,16 @@ public class Carta {
 	private Palo palo;
 	private int numero;
 	
-	public Carta(int numeroCarta,Palo paloCarta){
-		this.palo=paloCarta;
-		this.numero=numeroCarta;
+	public Carta(int numeroCarta,Palo paloCarta) {
+		
+		if (((numeroCarta>=1)&&(numeroCarta<=7)) || 
+				((numeroCarta>=10)&&(numeroCarta<=12))) {
+		
+			this.palo=paloCarta;
+			this.numero=numeroCarta;
+		} else {
+			this.numero=4; // le asigno la carta de menor valor.
+		}
 	}
 	
 	public Palo getPalo() {
